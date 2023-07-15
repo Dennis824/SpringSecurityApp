@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+
+<form name="f" method="post" action="/process_login">
+    <label for="username">enter your name</label>
+    <input type="text" name="username" id="username">
+    <br/>
+    <label for="password">enter your password</label>
+    <input type="text" name="password" id="password">
+    <br/>
+    <input type="submit" value="Login"/>
+
+    <div th:if="${param.error}" style="color: red">
+        Incorrect username or password</div>
+
+</form>
+
+</body>
+</html>
