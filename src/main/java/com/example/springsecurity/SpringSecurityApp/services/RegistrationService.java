@@ -3,7 +3,10 @@ package com.example.springsecurity.SpringSecurityApp.services;
 import com.example.springsecurity.SpringSecurityApp.models.Person;
 import com.example.springsecurity.SpringSecurityApp.repositories.PeopleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+@Service
 public class RegistrationService {
 
     private final PeopleRepository peopleRepository;
@@ -14,6 +17,7 @@ public class RegistrationService {
         this.peopleRepository = peopleRepository;
     }
 
+    @Transactional
     public void register(Person person){
         peopleRepository.save(person);
     }
