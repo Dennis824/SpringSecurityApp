@@ -27,12 +27,23 @@ public class Person {
     @Column(name = "password")
     private String password;
 
+    @Column(name= "role")
+    private String role;
+
     public Person() {
     }
 
     public Person(String username, int yearOfBirth) {
         this.username = username;
         this.yearOfBirth = yearOfBirth;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 
     public int getId() {
