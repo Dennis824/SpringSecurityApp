@@ -37,7 +37,7 @@ public class AuthController {
     }
 
     @PostMapping("/registration")
-    public String perfomanceRegistration(@ModelAttribute("person") @Valid Person person,
+    public String performanceRegistration(@ModelAttribute("person") @Valid Person person,
                                           BindingResult bindingResult) {
         personValidator.validate(person, bindingResult);
         if(bindingResult.hasErrors())
